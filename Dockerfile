@@ -2,7 +2,9 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY frontend ./frontend
+
+WORKDIR /app/frontend
 
 RUN apk add --no-cache bash git
 
