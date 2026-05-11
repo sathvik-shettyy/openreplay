@@ -10,6 +10,10 @@ RUN apk add --no-cache bash git
 
 RUN yarn install
 
+RUN yarn build
+
+RUN yarn global add serve
+
 EXPOSE 3000
 
-CMD ["yarn", "start", "--host", "0.0.0.0"]
+CMD ["serve", "-s", "build", "-l", "3000"]
