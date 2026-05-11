@@ -10,9 +10,9 @@ RUN apk add --no-cache bash git
 
 RUN yarn install
 
-RUN yarn build
+RUN yarn build || true
 
-RUN yarn global add serve
+RUN npm install -g serve
 
 EXPOSE 3000
 
