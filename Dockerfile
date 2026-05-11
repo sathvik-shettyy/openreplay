@@ -8,10 +8,10 @@ WORKDIR /app/frontend
 
 RUN apk add --no-cache bash git
 
-RUN npm install -g pnpm
+RUN npm install -g yarn
 
-RUN pnpm install
+RUN yarn install
 
 EXPOSE 3000
 
-CMD ["pnpm", "start"]
+CMD ["yarn", "start"]
