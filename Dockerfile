@@ -12,4 +12,4 @@ RUN yarn install
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["yarn", "start", "--host", "0.0.0.0"]
